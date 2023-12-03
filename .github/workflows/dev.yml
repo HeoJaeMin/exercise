@@ -29,7 +29,9 @@ jobs:
           aws configure set default.region ${{ env.AWS_REGION }}
 
       - name: Build JAR
-        run: ./gradlew clean build -Pprofile=dev
+        run: |
+          chmod +x gradlew
+          ./gradlew clean build -Pprofile=dev
 
       - name: Build the Docker image
         run: |
