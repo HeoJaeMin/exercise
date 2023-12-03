@@ -30,7 +30,7 @@ server:
 spring:
   config:
     activate:
-      on-profile: prod
+      on-profile: live
 
 server:
   port: 8083
