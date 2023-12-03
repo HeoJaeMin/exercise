@@ -26,13 +26,29 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-tasks.withType(KotlinCompile) {
+tasks.withType(KotlinCompile){
 	kotlinOptions {
 		freeCompilerArgs += '-Xjsr305=strict'
 		jvmTarget = '17'
 	}
 }
 
+tasks{
+	processResources{
+		duplicatesStrategy = DuplicatesStrategy.INCLUDE
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+String profile = project.hasProperty("profile") ? project.property("profile"): "dev"
+
+sourceSets {
+	main{
+		resources{
+			srcDirs "src/main/resources", "src/main/resources/resources-env/${profile}"
+		}
+	}
 }
