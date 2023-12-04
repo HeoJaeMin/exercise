@@ -48,7 +48,7 @@ String profile = project.hasProperty("profile") ? project.property("profile"): "
 sourceSets {
 	main{
 		resources{
-			srcDirs "src/main/resources", "src/main/resources/resources-env/${profile}"
+			files "src/main/resources/application-core.yaml", "src/main/resources/application-${profile}.yaml"
 		}
 	}
 }
