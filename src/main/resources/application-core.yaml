@@ -1,5 +1,10 @@
 spring:
-    application:
-      name: hanghae-excercise
+  application:
+    name: hanghae-excercise
 
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,beans,conditions
+        exclude: threaddump, heapdump
