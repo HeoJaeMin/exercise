@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:570137448705:task-definition/hanghae-dev-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:570137448705:task-definition/hanghae-dev-task:8",
     "containerDefinitions": [
         {
             "name": "hanghae-dev-container",
-            "image": "570137448705.dkr.ecr.ap-northeast-2.amazonaws.com/hanghae-dev:e97561e9b798b2de4a1f2728a6ab917178584a82",
+            "image": "570137448705.dkr.ecr.ap-northeast-2.amazonaws.com/hanghae-dev:e9788b89eb1121aeab9fbd8f5051f8246bcf18d2",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,10 +16,8 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -35,7 +33,7 @@
     "family": "hanghae-dev-task",
     "executionRoleArn": "arn:aws:iam::570137448705:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 8,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -78,7 +76,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-12-05T11:38:29.239Z",
+    "registeredAt": "2023-12-05T13:37:15.230Z",
     "registeredBy": "arn:aws:iam::570137448705:root",
     "tags": []
 }
