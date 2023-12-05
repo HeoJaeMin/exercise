@@ -10,6 +10,6 @@ class TextController{
 
     @GetMapping("/test")
     fun helloWorld(): String {
-        return "test"
+        return "test done"
     }
 }
