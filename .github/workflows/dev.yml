@@ -60,7 +60,7 @@ jobs:
         distribution: 'adopt'
 
     - name: Gradlew Grant
-      run: chmod -x gradlew
+      run: chmod -x ./gradlew
 
     - name: Build Jar
       run: ./gradlew build
