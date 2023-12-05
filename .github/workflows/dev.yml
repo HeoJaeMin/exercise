@@ -59,6 +59,9 @@ jobs:
         java-version: 17
         distribution: 'adopt'
 
+    - name: Gradlew Grant
+      run: chmod -x gradlew
+
     - name: Build Jar
       run: ./gradlew build
 
