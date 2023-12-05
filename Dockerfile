@@ -10,6 +10,6 @@ COPY build.gradle settings.gradle gradle gradlew gradlew.bat /app/
 
 COPY src /app/src
 
-RUN gradle clean build --no-demon
+RUN gradle clean build --no-daemon
 
-CMD ["java", "-jar", "exec-0.0.1-SNAPSHOT.jar", "--spring.profiles.active=core,${BRANCH}"]
+CMD ["java", "-jar", "build/libs/*.jar", "--spring.profiles.active=core,${BRANCH}"]
