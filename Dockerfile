@@ -1,4 +1,3 @@
-
 FROM adoptopenjdk:17-jre-hotspot
 
 # Set the working directory in the container
