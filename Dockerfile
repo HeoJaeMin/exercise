@@ -12,4 +12,4 @@ COPY src /app/src
 
 RUN gradle clean build
 
-CMD ["java", "-jar", "app.jar", "-Dspring.profiles.active=core,${BRANCH}"]
+CMD ["java", "-jar", "app.jar", "--spring.profiles.active=core,${BRANCH}"]
