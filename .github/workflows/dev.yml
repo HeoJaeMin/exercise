@@ -7,10 +7,10 @@ on:
 env:
   AWS_REGION: ap-northeast-2
   ECR_REPOSITORY: hanghae-dev
-  #ECS_SERVICE: MY_ECS_SERVICE
-  #ECS_CLUSTER: MY_ECS_CLUSTER
-  #ECS_TASK_DEFINITION: MY_ECS_TASK_DEFINITION
-  #CONTAINER_NAME: MY_CONTAINER_NAME
+  ECS_SERVICE: hanghae-dev-service
+  ECS_CLUSTER: hanghae-dev-cluster
+  ECS_TASK_DEFINITION: hanghae-dev-task
+  CONTAINER_NAME: hanghae-dev-container
 
 permissions:
   contents: read
