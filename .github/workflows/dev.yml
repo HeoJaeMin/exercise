@@ -9,7 +9,7 @@ env:
   ECR_REPOSITORY: hanghae-dev
   ECS_SERVICE: hanghae-dev-service
   ECS_CLUSTER: hanghae-dev-cluster
-  ECS_TASK_DEFINITION: hanghae-dev-task-revision1.json
+  ECS_TASK_DEFINITION: hanghae-dev-task
   CONTAINER_NAME: hanghae-dev-container
 
 permissions:
