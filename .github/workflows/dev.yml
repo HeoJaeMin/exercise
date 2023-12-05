@@ -7,7 +7,7 @@ on:
 env:
   AWS_REGION: ap-northeast-2
   ECR_REPOSITORY: hanghae-dev
-  ECS_SERVICE: hanghae-dev-service
+  ECS_SERVICE: hanghae-dev-service3
   ECS_CLUSTER: hanghae-dev-cluster
   ECS_TASK_DEFINITION: hanghae-dev-task.json
   CONTAINER_NAME: hanghae-dev-container
