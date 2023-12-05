@@ -42,13 +42,3 @@ tasks{
 tasks.named('test') {
 	useJUnitPlatform()
 }
-
-String profile = project.hasProperty("profile") ? project.property("profile"): "dev"
-
-sourceSets {
-	main{
-		resources{
-			files "src/main/resources/application-core.yaml", "src/main/resources/application-${profile}.yaml"
-		}
-	}
-}
