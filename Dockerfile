@@ -10,6 +10,6 @@ COPY build.gradle settings.gradle gradle gradlew gradlew.bat /app/
 
 COPY src /app/src
 
-RUN ./gradlew clean build
+RUN gradle clean build
 
 CMD ["java", "-jar", "app.jar", "-Dspring.profiles.active=core,${BRANCH}"]
