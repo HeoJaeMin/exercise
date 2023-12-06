@@ -12,12 +12,14 @@ COPY src /app/src
 
 RUN gradle clean build --no-daemon
 
-RUN if["${BRANCH}" = "live"]; then \
-   EXPOSE 8083; \
-   elif [ "${BRANCH}" = "qa"]; then\
-   EXPOSE 8082;\
-   else \
-   EXPOSE 8081;\
-   fi
+RUN if [ "$BRANCH" = "live" ]; then \
+       PORT=8083; \
+    elif [ "$BRANCH" = "qa" ]; then \
+       PORT=8082; \
+    else \
+       PORT=8081; \
+    fi && \
+    echo "Using port $PORT" && \
+    EXPOSE $PORT
 
 ENTRYPOINT ["java", "-jar", "/app/build/libs/exec-0.0.1-SNAPSHOT.jar", "--spring.profiles.active=core,${BRANCH}"]
