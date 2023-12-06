@@ -5,11 +5,10 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/test")
 class TextController{
 
-    @GetMapping("/test")
+    @GetMapping("/health")
     fun helloWorld(): String {
-        return "test done"
+        return "OK"
     }
 }
